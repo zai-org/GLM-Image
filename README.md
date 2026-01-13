@@ -11,8 +11,10 @@
     📍 Use GLM-Image's <a href="https://docs.z.ai/guides/image/glm-image" target="_blank">API</a>
 </p>
 
-
 ![show_case](resources/show_case.jpeg)
+<p align="center">
+  <img src="resources/show_case.jpeg" alt="show_case" width="100%" />
+</p>
 
 ## Introduction
 
@@ -20,12 +22,16 @@ GLM-Image is an image generation model adopts a hybrid autoregressive + diffusio
 
 Model architecture: a hybrid autoregressive + diffusion decoder design.
 
-![architecture](resources/architecture_1.jpeg)
+<p align="center">
+  <img src="resources/architecture_1.jpeg" alt="architecture_1" width="100%" />
+</p>
 
 + Autoregressive generator: a 9B-parameter model initialized from [GLM-4-9B-0414](https://huggingface.co/zai-org/GLM-4-9B-0414), with an expanded vocabulary to incorporate visual tokens. The model first generates a compact encoding of approximately 256 tokens, then expands to 1K–4K tokens, corresponding to 1K–2K high-resolution image outputs.
 + Diffusion Decoder: a 7B-parameter decoder based on a single-stream DiT architecture for latent-space image decoding. It is equipped with a Glyph Encoder text module, significantly improving accurate text rendering within images.
 
-![architecture](resources/architecture_2.jpeg)
+<p align="center">
+  <img src="resources/architecture_2.jpeg" alt="architecture_2" width="70%" />
+</p>
 
 Post-training with decoupled reinforcement learning: the model introduces a fine-grained, modular feedback strategy using the GRPO algorithm, substantially enhancing both semantic understanding and visual detail quality.
 
@@ -41,11 +47,15 @@ GLM-Image supports both text-to-image and image-to-image generation within a sin
 
 ### T2I with dense text and knowledge
 
-![show_case](resources/show_case_t2i.jpeg)
+<p align="center">
+  <img src="resources/show_case_t2i.jpeg" alt="show_case_t2i" width="100%" />
+</p>
 
 ### I2I
 
-![show_case](resources/show_case_i2i.jpeg)
+<p align="center">
+  <img src="resources/show_case_i2i.jpeg" alt="show_case_i2i" width="100%" />
+</p>
 
 ## Quick Start
 
