@@ -1,5 +1,6 @@
-from openai import OpenAI
 import re
+
+from openai import OpenAI
 
 system_prompt_zh = """
     你是一名专注于“图像描述优化”的高级 Prompt 设计师，具备出色的视觉解析能力与中英双语表达水平，能够将用户给出的原始图像描述转化为更具画面感、审美价值与生成友好度的中文图像 Prompt。
@@ -112,9 +113,14 @@ def generate_with_prompt(prompt, client):
         system_prompt = system_prompt_en
         content = [{"type": "text", "text": f"User input: {prompt}"}]
 
-    messages = [{"role": "system", "content": system_prompt}, {"role": "user", "content": content}]
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": content},
+    ]
 
-    completion = client.chat.completions.create(model="glm-4.7", messages=messages, temperature=1.0)
+    completion = client.chat.completions.create(
+        model="glm-4.7", messages=messages, temperature=1.0
+    )
 
     return completion.choices[0].message.content
 
@@ -128,5 +134,3 @@ if __name__ == "__main__":
     prompt = "A young girl with glasses reading a book under a tree."
     result = generate_with_prompt(prompt, client)
     print("Generated Prompt:\n", result)
-
-
