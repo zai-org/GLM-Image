@@ -11,17 +11,8 @@
     📍 Use GLM-Image's <a href="https://docs.z.ai/guides/image/glm-image" target="_blank">API</a>
 </p>
 
-## Case
 
 ![show_case](resources/show_case.jpeg)
-
-### T2I with dense text and knowledge
-
-![show_case](resources/show_case_t2i.jpeg)
-
-### I2I
-
-![show_case](resources/show_case_i2i.jpeg)
 
 ## Introduction
 
@@ -29,7 +20,7 @@ GLM-Image is an image generation model adopts a hybrid autoregressive + diffusio
 
 Model architecture: a hybrid autoregressive + diffusion decoder design.
 
-![architecture](resources/architecture.jpeg)
+![architecture](resources/architecture_1.jpeg)
 
 + Autoregressive generator: a 9B-parameter model initialized from [GLM-4-9B-0414](https://huggingface.co/zai-org/GLM-4-9B-0414), with an expanded vocabulary to incorporate visual tokens. The model first generates a compact encoding of approximately 256 tokens, then expands to 1K–4K tokens, corresponding to 1K–2K high-resolution image outputs.
 + Diffusion Decoder: a 7B-parameter decoder based on a single-stream DiT architecture for latent-space image decoding. It is equipped with a Glyph Encoder text module, significantly improving accurate text rendering within images.
@@ -41,8 +32,20 @@ Post-training with decoupled reinforcement learning: the model introduces a fine
 
 GLM-Image supports both text-to-image and image-to-image generation within a single model.
 
+![architecture](resources/architecture_2.jpeg)
+
 + Text-to-image: generates high-detail images from textual descriptions, with particularly strong performance in information-dense scenarios.
 + Image-to-image: supports a wide range of tasks, including image editing, style transfer, multi-subject consistency, and identity-preserving generation for people and objects.
+
+## Showcase
+
+### T2I with dense text and knowledge
+
+![show_case](resources/show_case_t2i.jpeg)
+
+### I2I
+
+![show_case](resources/show_case_i2i.jpeg)
 
 ## Quick Start
 
