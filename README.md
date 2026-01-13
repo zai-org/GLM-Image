@@ -15,6 +15,9 @@ GLM-Image is an image generation model adopts a hybrid autoregressive + diffusio
 
 Model architecture: a hybrid autoregressive + diffusion decoder design.
 
+![architecture](resources/architecture.jpeg)
+![architecture2](resources/architecture2.jpeg)
+
 + Autoregressive generator: a 9B-parameter model initialized from [GLM-4-9B-0414](https://huggingface.co/zai-org/GLM-4-9B-0414), with an expanded vocabulary to incorporate visual tokens. The model first generates a compact encoding of approximately 256 tokens, then expands to 1K–4K tokens, corresponding to 1K–2K high-resolution image outputs.
 + Diffusion Decoder: a 7B-parameter decoder based on a single-stream DiT architecture for latent-space image decoding. It is equipped with a Glyph Encoder text module, significantly improving accurate text rendering within images.
 
@@ -27,6 +30,20 @@ GLM-Image supports both text-to-image and image-to-image generation within a sin
 
 + Text-to-image: generates high-detail images from textual descriptions, with particularly strong performance in information-dense scenarios.
 + Image-to-image: supports a wide range of tasks, including image editing, style transfer, multi-subject consistency, and identity-preserving generation for people and objects.
+
+## Case
+
+### T2I
+
+![show_case](resources/show_case.jpeg)
+
+### T2I with dense text and knowledge
+
+![show_case](resources/show_case_t2i.jpeg)
+
+### I2I
+
+![show_case](resources/show_case_i2i.jpeg)
 
 ## Quick Start
 
@@ -142,25 +159,6 @@ The following data was tested on a single `H100` with `diffusers` lib and can be
 | 512×512    | 4          | T2I  | 39.34               | 37.83          | Fixed prompt, ~1000 tokens                       |
 | 2048×2048  | 1          | I2I  | 274.51              | 45.08          | Reference image same size as target, ~100 tokens |
 | 1024×1024  | 1          | I2I  | 58.64               | 37.83          | Reference image same size as target, ~100 tokens |
-
-## Case
-
-### T2I
-<div style="display: flex; justify-content: space-around;">
-  <img src="resources/show_case.jpeg" width="100%"/>
-</div>
-
-### T2I with dense text and knowledge
-
-<div style="display: flex; justify-content: space-around;">
-  <img src="resources/show_case_t2i.jpeg" width="100%"/>
-</div>
-
-### I2I
-
-<div style="display: flex; justify-content: space-around;">
-  <img src="resources/show_case_i2i.jpeg" width="100%"/>
-</div>
 
 ## Model Performance
 
