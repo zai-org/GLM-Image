@@ -11,12 +11,25 @@
     📍 Use GLM-Image's <a href="https://docs.z.ai/guides/image/glm-image" target="_blank">API</a>
 </p>
 
+## Case
+
+![show_case](resources/show_case.jpeg)
+
+### T2I with dense text and knowledge
+
+![show_case](resources/show_case_t2i.jpeg)
+
+### I2I
+
+![show_case](resources/show_case_i2i.jpeg)
+
+## Introduction
+
 GLM-Image is an image generation model adopts a hybrid autoregressive + diffusion decoder architecture. In general image generation quality, GLM‑Image aligns with mainstream latent diffusion approaches, but it shows significant advantages in text-rendering and knowledge‑intensive generation scenarios. It performs especially well in tasks requiring precise semantic understanding and complex information expression, while maintaining strong capabilities in high‑fidelity and fine‑grained detail generation. In addition to text‑to‑image generation, GLM‑Image also supports a rich set of image‑to‑image tasks including image editing, style transfer, identity‑preserving generation, and multi‑subject consistency.
 
 Model architecture: a hybrid autoregressive + diffusion decoder design.
 
 ![architecture](resources/architecture.jpeg)
-![architecture2](resources/architecture2.jpeg)
 
 + Autoregressive generator: a 9B-parameter model initialized from [GLM-4-9B-0414](https://huggingface.co/zai-org/GLM-4-9B-0414), with an expanded vocabulary to incorporate visual tokens. The model first generates a compact encoding of approximately 256 tokens, then expands to 1K–4K tokens, corresponding to 1K–2K high-resolution image outputs.
 + Diffusion Decoder: a 7B-parameter decoder based on a single-stream DiT architecture for latent-space image decoding. It is equipped with a Glyph Encoder text module, significantly improving accurate text rendering within images.
@@ -30,20 +43,6 @@ GLM-Image supports both text-to-image and image-to-image generation within a sin
 
 + Text-to-image: generates high-detail images from textual descriptions, with particularly strong performance in information-dense scenarios.
 + Image-to-image: supports a wide range of tasks, including image editing, style transfer, multi-subject consistency, and identity-preserving generation for people and objects.
-
-## Case
-
-### T2I
-
-![show_case](resources/show_case.jpeg)
-
-### T2I with dense text and knowledge
-
-![show_case](resources/show_case_t2i.jpeg)
-
-### I2I
-
-![show_case](resources/show_case_i2i.jpeg)
 
 ## Quick Start
 
