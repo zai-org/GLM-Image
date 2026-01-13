@@ -42,6 +42,9 @@ GLM-Image supports both text-to-image and image-to-image generation within a sin
 + Text-to-image: generates high-detail images from textual descriptions, with particularly strong performance in information-dense scenarios.
 + Image-to-image: supports a wide range of tasks, including image editing, style transfer, multi-subject consistency, and identity-preserving generation for people and objects.
 
+
+> You can find the full GLM-Image Model implementation in the [transformers](https://github.com/huggingface/transformers/tree/main/src/transformers/models/glm_image) and [diffusers](https://github.com/huggingface/diffusers/tree/main/src/diffusers/pipelines/glm_image) libraries here.
+
 ## Showcase
 
 ### T2I with dense text and knowledge
@@ -79,7 +82,7 @@ image = pipe(
     prompt=prompt,
     height=32 * 32,
     width=36 * 32,
-    num_inference_steps=30,
+    num_inference_steps=50,
     guidance_scale=1.5,
     generator=torch.Generator(device="cuda").manual_seed(42),
 ).images[0]
@@ -103,7 +106,7 @@ image = pipe(
     image=[image],  # can input multiple images for multi-image-to-image generation such as [image, image1]
     height=33 * 32, # Must set height even it is same as input image
     width=32 * 32, # Must set width even it is same as input image
-    num_inference_steps=30,
+    num_inference_steps=50,
     guidance_scale=1.5,
     generator=torch.Generator(device="cuda").manual_seed(42),
 ).images[0]
