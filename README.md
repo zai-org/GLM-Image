@@ -11,7 +11,6 @@
     📍 Use GLM-Image's <a href="https://docs.z.ai/guides/image/glm-image" target="_blank">API</a>
 </p>
 
-![show_case](resources/show_case.jpeg)
 <p align="center">
   <img src="resources/show_case.jpeg" alt="show_case" width="100%" />
 </p>
