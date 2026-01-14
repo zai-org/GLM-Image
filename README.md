@@ -159,7 +159,7 @@ curl -s -X POST "http://localhost:30000/v1/images/edits" \
 
 ### Note
 
-+ We strongly recommend to use GLM-4.7 to enhance prompts for higher image quality, Please check [script](examples/prompt_utils.py) for more details.
++ Please ensure that all text intended to be rendered in the image is enclosed in quotation marks in the model input and We strongly recommend using GLM-4.7 to enhance prompts for higher image quality. Please check [script](examples/prompt_utils.py) for more details.
 + The AR model used in GLM‑Image is configured with `do_sample=True`, a temperature of `0.9`, and a topp of `0.75` by default. A higher temperature results in more diverse and rich outputs, but it can also lead to a certain decrease in output stability.
 + The target image resolution must be divisible by 32. Otherwise, it will throw an error.
 + Because the inference optimizations for this architecture are currently limited, the runtime cost is still relatively high. It requires either a single GPU with more than 80GB of memory, or a multi-GPU setup.
