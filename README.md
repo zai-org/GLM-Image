@@ -42,8 +42,13 @@ GLM-Image supports both text-to-image and image-to-image generation within a sin
 + Text-to-image: generates high-detail images from textual descriptions, with particularly strong performance in information-dense scenarios.
 + Image-to-image: supports a wide range of tasks, including image editing, style transfer, multi-subject consistency, and identity-preserving generation for people and objects.
 
-
 > You can find the full GLM-Image Model implementation in the [transformers](https://github.com/huggingface/transformers/tree/main/src/transformers/models/glm_image) and [diffusers](https://github.com/huggingface/diffusers/tree/main/src/diffusers/pipelines/glm_image) libraries here.
+
+## Download
+
+| Model     | Download Links                                                                                                               |
+|-----------|------------------------------------------------------------------------------------------------------------------------------|
+| GLM-Image | [🤗 Hugging Face](https://huggingface.co/zai-org/GLM-Image)<br>[🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/GLM-Image) |
 
 ## Showcase
 
