@@ -6,7 +6,7 @@
 <p align="center">
     👋 Join our <a href="resources/WECHAT.md" target="_blank">WeChat</a> and <a href="https://discord.gg/8KFjEec7" target="_blank">Discord</a> community
     <br>
-    📖 Check out GLM-Image's <a href="https://z.ai/blog/glm-image" target="_blank">Technical Blog</a>
+    📖 Check out GLM-Image's <a href="https://z.ai/blog/glm-image" target="_blank">Technical Blog</a> and <a href="https://huggingface.co/zai-org/GLM-Image" target="_blank">🤗 Model Card</a>
     <br>
     📍 Use GLM-Image's <a href="https://docs.z.ai/guides/image/glm-image" target="_blank">API</a>
 </p>
