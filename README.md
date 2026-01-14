@@ -133,7 +133,7 @@ curl http://localhost:30000/v1/images/generations \
   -H "Content-Type: application/json" \
   -d '{
     "model": "zai-org/GLM-Image",
-    "prompt": "Doraemon is flying in the sky.",
+    "prompt": "a beautiful girl with glasses.",
     "n": 1,
     "response_format": "b64_json",
     "size": "1024x1024"
