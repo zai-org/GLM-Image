@@ -88,7 +88,7 @@ This script reads the key from the `ZHIPU_API_KEY` environment variable. Reusing
 3. **Shell environment variable / Shell 环境变量：** Add to `~/.zshrc`:
   
    ```bash
-export ZHIPU_API_KEY="你的密钥"
+    export ZHIPU_API_KEY="你的密钥"
 
    ```
 
