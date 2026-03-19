@@ -193,9 +193,11 @@ def generate_image(
             return {
                 "ok": True,
                 "result": result,
-                "image_url": result.get("data", [{}])[0].get("url")
-                if result.get("data")
-                else None,
+                "image_url": (
+                    result.get("data", [{}])[0].get("url")
+                    if result.get("data")
+                    else None
+                ),
                 "prompt": prompt,
                 "size": size,
                 "quality": quality,

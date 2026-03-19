@@ -1,21 +1,22 @@
 ---
 name: glm-image-generation
 description:
-Official skill for generating high-quality images from text prompts using ZhiPu GLM-Image API.
-Excellent at scientific illustrations, high-quality portraits, social media graphics, and commercial posters.
-Supports multiple aspect ratios, HD quality, and watermark control.
-Use this skill when the user wants to generate images, create AI art, text-to-image,
-or convert text descriptions into visual content.
+  Official skill for generating high-quality images from text prompts using ZhiPu GLM-Image API.
+  Excellent at scientific illustrations, high-quality portraits, social media graphics, and commercial posters.
+  Supports multiple aspect ratios, HD quality, and watermark control.
+  Use this skill when the user wants to generate images, create AI art, text-to-image,
+  or convert text descriptions into visual content.
 metadata:
-openclaw:
-requires:
-env:
-- ZHIPU_API_KEY
-bins:
-- python
-primaryEnv: ZHIPU_API_KEY
-emoji: "🎨"
-homepage: https://github.com/zai-org/GLM-Image
+  openclaw:
+    requires:
+      env:
+        - ZHIPU_API_KEY
+        - GLM_OCR_TIMEOUT
+      bins:
+        - python
+    primaryEnv: ZHIPU_API_KEY
+    emoji: "🎨"
+    homepage: https://github.com/zai-org/GLM-Image/tree/main/skills/glm-image-generation
 ---
 
 # GLM-Image Generation Skill / GLM-Image 图片生成技能
@@ -86,7 +87,7 @@ This script reads the key from the `ZHIPU_API_KEY` environment variable. Reusing
    ```
 
 3. **Shell environment variable / Shell 环境变量：** Add to `~/.zshrc`:
-  
+
    ```bash
     export ZHIPU_API_KEY="你的密钥"
 
