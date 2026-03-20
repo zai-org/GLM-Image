@@ -11,7 +11,6 @@ metadata:
     requires:
       env:
         - ZHIPU_API_KEY
-        - GLM_OCR_TIMEOUT
       bins:
         - python
     primaryEnv: ZHIPU_API_KEY
