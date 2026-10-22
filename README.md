@@ -1,7 +1,8 @@
 # GLM-Image
 
 <div align="center">
-<img src=resources/logo.svg width="40%"/>
+<img src="resources/logo.svg#gh-light-mode-only" alt="GLM-Image" width="40%" />
+<img src="resources/logo-dark.svg#gh-dark-mode-only" alt="GLM-Image" width="40%" />
 </div>
 <p align="center">
     👋 Join our <a href="resources/WECHAT.md" target="_blank">WeChat</a> and <a href="https://discord.gg/8KFjEec7" target="_blank">Discord</a> community
